@@ -5,6 +5,12 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+.item-grid .grid {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
 
 .filters button {
     text-transform: uppercase;
