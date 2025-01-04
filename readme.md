@@ -67,12 +67,6 @@ For inquiries or to learn more about our services, you can reach us at:
 
 ---
 
-### License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
 ### Why Choose Us?
 
 At **The Picture Patch**, we don’t just edit photos, we elevate them. Our team is committed to providing the highest standards of photo editing, with fast turnarounds and affordable pricing, ensuring that each image meets your vision perfectly.
