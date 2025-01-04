@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thepicturespatch.com/sitemap.xml
