@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "image-compare-viewer": "^1.6.2",
+    "jquery-anyimagecomparisonslider-plugin": "^1.0.4"
+  }
+}

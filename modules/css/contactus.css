@@ -1,0 +1,169 @@
+.contact-section {
+  text-align: center;
+  padding: 100px 60px 30px 60px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.summury-co {
+  margin-bottom: 20px;
+}
+
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-item p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.contact-item p strong {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+.icon-bg {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  justify-content: center;
+  border: 2px solid #d6af7b;
+  border-radius: 50%;
+}
+
+.icon-bg-c {
+  font-weight: 900;
+  font-size: 40px !important;
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  color: #333;
+}
+
+.quote-al {
+  text-align: center;
+  padding: 30px;
+}
+
+.quote-form {
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.quote-form h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 2px solid #333;
+}
+
+::placeholder {
+  text-align: center;
+  color: black;
+  font-weight: 100;
+  font-style: italic;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 14px;
+  max-width: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  border: 1px solid #333;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+
+.map-sec {
+  margin-bottom: 60px;
+}
+
+@media(max-width:768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media(max-width:500px) {
+  .contact-section {
+    padding: 100px 10px 30px 10px !important;
+  }
+
+  .quote-form {
+    padding: 30px 10px;
+  }
+
+}

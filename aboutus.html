@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="modules/css/main.css">
+    <link rel="stylesheet" href="modules/css/aboutus.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header-sec">
+
+        <div class="header-content">
+
+            <div>
+                <span class="material-symbols-outlined" aria-label="Toggle Sidebar"
+                    onclick="toggleLeftBar()">drag_handle</span>
+            </div>
+            <div class="logo-aw">
+                <a href="index.html"><img src="assets/TPP Logo.png"></a>
+            </div>
+            <div>
+                <span class="material-symbols-outlined" onclick="toggleMenu()">menu</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Navigation Sidebar -->
+    <div class="left-bar-sec">
+
+        <div class="lef-bar-close">
+            <span class="material-symbols-outlined close-icon" onclick="closeLeftBar()">close</span>
+        </div>
+
+        <div class="content-leftbar">
+
+            <div class="quote-side">
+
+                <h1 class="head-ing">The Picture Patch</h1>
+                <p style="text-align: justify;">In the year 2019, The Picture Pitch became widely recognized as a
+                    leading service provider specializing in high-quality Photo Editing, Manipulation, and other related
+                    services. We pride ourselves on delivering creative and precise image transformations that meet the
+                    highest standards of excellence. ​</p>
+
+            </div>
+
+            <div class="latest-photos">
+                <h3 class="head-ing">Latest Photos</h3>
+                <div class="photo-gallery">
+                    <a href="gallery.html?category=hdr"><img src="assets/HDR/DY4A4216-l.jpg" alt="Photo 1"></a>
+                    <a href="gallery.html?category=twilight"><img src="assets/Twilight/DY4A8001-l.jpg"
+                            alt="Photo 2"></a>
+                    <a href="gallery.html?category=virtual-staging"><img src="assets/Virtual Staging/DY4A9565-1-l.jpg"
+                            alt="Photo 3"></a>
+                    <a href="gallery.html?category=virtual-renovation"><img
+                            src="assets/Virtual Renovation/DY4A9580-1-L.jpg" alt="Photo 4"></a>
+                    <a href="gallery.html?category=item-removal"><img src="assets/Item Removal/IMG_0077-2-l.jpg"
+                            alt="Photo 5"></a>
+                    <!-- <a href=""><img src="assets/4.JPG" alt="Photo 6"></a> -->
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="divider">
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3 class="head-ing">Contact Us</h3>
+                <p>
+                    <span>Address:</span>Tamilnadu - India. <br>
+                    <span class="ph-le">Phone:</span> (+91) 9715210210, <br>
+                <p class="phone-sec">(+91) 6383125089</p>
+                <span class="em-side">Email:</span> <a
+                    href="mailto:thepicturepatch0424@gmail.com">thepicturepatch0424@gmail.com</a>
+                </p>
+                <a href="contact.html" class="contact-button">Get in Touch</a>
+            </div>
+        </div>
+        <div class="cop-right-side">
+            Copyright © 2024 ------------. All Rights Reserved.
+        </div>
+    </div>
+
+    <!-- Fullscreen Navigation -->
+    <div class="fullscreen-nav" id="fullscreenNav">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html" class="active">About us</a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">our Services</a>
+                <ul class="submenu">
+                    <li><a href="hdr.html">HDR</a></li>
+                    <li><a href="twilight.html">Twilight</a></li>
+                    <li><a href="virtualstaging.html">Virtual Staging</a></li>
+                    <li><a href="virtualrenovation.html">Virtual Renovation</a></li>
+                    <li><a href="itemremoval.html">Item Removal</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+    <!-- About Section -->
+    <section class="abt-first-d">
+        <h1 class="abt-heading">About<span>The Picture Patch</span> </h1>
+        <div class="abt-in-us">
+            <div class="abt-f-us abt-first-c">
+
+                <p>Welcome to The Picture Patch; the online hub for all things digital. Picture Patch offers a wide
+                    range of services to
+                    everyone from real estate agents to developers, professional photographers to amateurs, and online
+                    retailers who want to showcase their products with professional photos.</p>
+
+                <p>The Picture Patch is Located in Tamilnadu, in the southern part of India but we have a large team of
+                    experts
+                    working around the clock, which means Picture Patch can offer a guaranteed 12-hours turnaround.</p>
+
+                <p>Thanks to our team of photo editing experts, Picture Patch can offer a range of retouching services
+                    such as
+                    removing the background from an image, item removal, and photo enhancement to give your photos that
+                    professional look. Our CGI rendering is perfect for clearly demonstrating conceptual product ideas
+                    or stand out from the crowd and create slick images for your online retail store.</p>
+
+            </div>
+
+            <div class="abt-f-us abt-sec-c">
+
+                <p>Real estate agents can enjoy a range of services dedicated to their needs from a selection of
+                    floorplans to development site plans, CGI renders, and photo enhancement options including turning
+                    external property photos from day to dusk, adding virtual furniture to rooms and removing unwanted
+                    clutter. Our copywriting service can also help agents get back to what they do best by supplying
+                    unique copy dedicated to their listing within 24 hours.</p>
+
+                <p>The Picture Patch is fast, reliable, and affordable convenience to help you achieve professional
+                    photos in no
+                    time at all. Our system is easy to use and with our 12-hours guarantee, top-quality edited photos
+                    are within reach.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose Us Section -->
+    <section class="why-we-use">
+        <h1 class="abt-heading why-we-h">Why Choose Us?</h1>
+
+        <div class="why-we-content">
+
+            <div class="we-us-f">
+
+                <div class="we-us-f-in">
+                    <div class="img-we-i">
+                        <img src="assets/icon-png/clock.png">
+                    </div>
+                    <h3>FAST</h3>
+                    <p>24 hour turn around (48 hours for virtual staging)</p>
+                </div>
+
+                <div class="we-us-f-in">
+                    <div class="img-we-i">
+                        <img src="assets/icon-png/no-hidden-charges.png">
+                    </div>
+                    <h3>NO HIDDEN FEES</h3>
+                    <p>Pay only for what you use with no subscriptions – just pay one fixed low rate per image</p>
+                </div>
+
+                <div class="we-us-f-in">
+                    <div class="img-we-i">
+                        <img src="assets/icon-png/forever.png">
+                    </div>
+                    <h3>UNLIMITED CHANGES</h3>
+                    <p>100% satisfaction with our unlimited change guarantee</p>
+                </div>
+
+            </div>
+
+            <div class="we-us-f we-us-f-nmn">
+
+                <div class="we-us-f-in">
+                    <div class="img-we-i">
+                        <img src="assets/icon-png/support.png">
+                    </div>
+                    <h3>REAL SERVICE</h3>
+                    <p>Our customer service experts are available 24/7 on live chat, phone or email</p>
+                </div>
+
+                <div class="we-us-f-in">
+                    <div class="img-we-i">
+                        <img src="assets/icon-png/copyright.png">
+                    </div>
+                    <h3>NO COPYRIGHT</h3>
+                    <p>We edit your images and return them to you – no ownership taken</p>
+                </div>
+
+                <div class="we-us-f-in">
+                    <div class="img-we-i">
+                        <img src="assets/icon-png/star.png">
+                    </div>
+                    <h3>FREE TRIAL PROJECT</h3>
+                    <p>Want to know how we are working? We do sample project for your specific service for free</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="abt-swiper">
+
+        <h1 class="abt-heading">Our Clients Reviews</h1>
+        <div class="about-swiper-container">
+            <div class="swiper about-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide about-swiper-slide">
+                        <div class="about-image">
+                            <img src="assets/Thumbnail/girl-Cus.jpg" alt="Customer image">
+                            <img src="assets/Thumbnail/girl-Cus-1.jpg" alt="Customer image">
+                        </div>
+                        <div class="about-review">
+                            <div class="right-quote">
+                                <img src="assets/icon-png/right.png">
+                            </div>
+                            <blockquote>
+                                <p>
+                                    We used both the HDR Photography and Virtual Staging services, and the results were
+                                    incredible! The HDR photos enhanced every detail with perfect lighting, while the
+                                    Virtual Staging transformed empty rooms into beautifully furnished spaces that
+                                    buyers could easily picture themselves living in. The combination made our property
+                                    stand out, resulting in a significant increase in interest and multiple offers
+                                    within days. The professionalism and attention to detail were exceptional, and we
+                                    couldn’t be happier with the outcome!
+                                </p>
+
+                            </blockquote>
+                            <div class="left-quote">
+                                <img src="assets/icon-png/left.png">
+                            </div>
+                            <p class="about-author">— Emma L.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide about-swiper-slide">
+                        <div class="about-image">
+                            <img src="assets/Thumbnail/Cust-2-2.jpg" alt="Customer image">
+                            <img src="assets/Thumbnail/Cust-2.jpg" alt="Customer image">
+                        </div>
+                        <div class="about-review">
+                            <div class="right-quote">
+                                <img src="assets/icon-png/right.png">
+                            </div>
+                            <blockquote>
+                                <p>
+                                    I used the Twilight and Virtual Renovation services for my property listing, and the
+                                    transformation was unbelievable! The Twilight photos created a stunning, warm
+                                    ambiance that made the exterior look magical, while the Virtual Renovation
+                                    completely reimagined an outdated living room into a modern, inviting space. The
+                                    level of detail and quality exceeded my expectations, and I received so many
+                                    compliments on the listing. These services truly made a difference in attracting
+                                    potential buyers. Highly recommended!
+                                </p>
+                            </blockquote>
+                            <div class="left-quote">
+                                <img src="assets/icon-png/left.png">
+                            </div>
+                            <p class="about-author">— Alessandro Russo.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide about-swiper-slide">
+                        <div class="about-image">
+                            <img src="assets/Thumbnail/Cust-1-1.jpg" alt="Customer image">
+                            <img src="assets/Thumbnail/Cust-1.jpg" alt="Customer image">
+                        </div>
+                        <div class="about-review">
+                            <div class="right-quote">
+                                <img src="assets/icon-png/right.png">
+                            </div>
+                            <blockquote>
+                                <p>
+                                    I used the item removal service and was really impressed. It made my property photos
+                                    look cleaner and more professional, with no noticeable edits. The results helped
+                                    showcase the property better, and I received more inquiries. Highly recommend!
+                                </p>
+                            </blockquote>
+                            <div class="left-quote">
+                                <img src="assets/icon-png/left.png">
+                            </div>
+                            <p class="about-author">— Lucas B.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide about-swiper-slide">
+                        <div class="about-image">
+                            <img src="assets/Thumbnail/Cust-3-3.jpg" alt="Customer image">
+                            <img src="assets/Thumbnail/Cust-3.jpg" alt="Customer image">
+                        </div>
+                        <div class="about-review">
+                            <div class="right-quote">
+                                <img src="assets/icon-png/right.png">
+                            </div>
+                            <blockquote>
+                                <p>
+                                    Working with this team was an absolute game-changer for our property listing. The
+                                    HDR photography they did truly brought out the best features of our home, with
+                                    stunning clarity and color. We were amazed at how the details, especially in the
+                                    darker areas, became visible and sharp. The results made the property look much more
+                                    appealing, and we received a lot of positive feedback from potential buyers. Highly
+                                    recommend their HDR service to anyone looking to elevate their property photos!
+                                </p>
+                            </blockquote>
+                            <div class="left-quote">
+                                <img src="assets/icon-png/left.png">
+                            </div>
+                            <p class="about-author">— Benjamin Clark.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination about-swiper-pagination"></div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Arrow Up/Down Button -->
+    <div id="arrow-up-btn" class="arrow-up">
+        <span class="material-symbols-outlined arrow-up-h">arrow_drop_up</span>
+    </div>
+
+    <!-- Social Icons -->
+    <div id="social-icons" class="social-icons hidden">
+        <a href="https://www.instagram.com/realestate__photo_editor?igsh=ZWJoam42OHo0b3Jl" target="_blank"
+            class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/9715210210?text=Recently%20I%20saw%20your%20website%20about%20your%20service.%20Let%20me%20know%20more%20about%20your%20services."
+            target="_blank" class="icon whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="foot-ins-a">
+            <div class="foot-f">
+                <h3 class="foot-fis head-ingg">The Picture Patch</h3>
+                <p>
+                    In the year 2019, The Picture Pitch became widely recognized as a leading service provider
+                    specializing in high-quality Photo Editing, Manipulation, and other related services. We pride
+                    ourselves on delivering creative and precise image transformations that meet the highest standards
+                    of excellence.
+                </p>
+            </div>
+            <div class="foot-f logo-container">
+                <img src="assets/TPP Logo.png" alt="The Picture Patch Logo" class="footer-logo">
+            </div>
+            <div class="foot-f">
+                <h3 class="foot-hed head-ingg">Contacts</h3>
+                <div class="foot-num">
+                    <div><span>Phone: </span>(+91) 9715210210</div>
+                    <div class="mar-left-n">(+91) 6383125089</div>
+
+                </div>
+                <div class="foot-num">
+                    <span>Email: </span><a href="mailto:thepicturepatch0424@gmail.com">thepicturepatch0424@gmail.com</a>
+                </div>
+                <p class="cop-right">&copy; 2020 The Picture Patch. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Scripts -->
+    <script src="modules/js/about.js"></script>
+    <script src="modules/js/main.js"></script>
+    <script src="modules/js/slider.js"></script>
+</body>
+
+</html>

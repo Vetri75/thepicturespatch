@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="modules/css/main.css">
+    <link rel="stylesheet" href="modules/css/aboutus.css">
+
+    <link rel="stylesheet" href="modules/css/gallery.css">
+    <title>Gallery</title>
+</head>
+
+<body>
+
+
+    <!-- Header Section -->
+    <header class="header-sec">
+
+        <div class="header-content">
+
+            <div>
+                <span class="material-symbols-outlined" aria-label="Toggle Sidebar"
+                    onclick="toggleLeftBar()">drag_handle</span>
+            </div>
+            <div class="logo-aw">
+                <a href="index.html"><img src="assets/TPP Logo.png"></a>
+            </div>
+            <div>
+                <span class="material-symbols-outlined" onclick="toggleMenu()">menu</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Navigation Sidebar -->
+    <div class="left-bar-sec">
+
+        <div class="lef-bar-close">
+            <span class="material-symbols-outlined close-icon" onclick="closeLeftBar()">close</span>
+        </div>
+
+        <div class="content-leftbar">
+
+            <div class="quote-side">
+
+                <h1 class="head-ing">The Picture Patch</h1>
+                <p style="text-align: justify;">In the year 2019, The Picture Pitch became widely recognized as a
+                    leading service provider specializing in high-quality Photo Editing, Manipulation, and other related
+                    services. We pride ourselves on delivering creative and precise image transformations that meet the
+                    highest standards of excellence. ​</p>
+
+            </div>
+
+            <div class="latest-photos">
+                <h3 class="head-ing">Latest Photos</h3>
+                <div class="photo-gallery">
+                    <a href="gallery.html?category=hdr"><img src="assets/HDR/DY4A4216-l.jpg" alt="Photo 1"></a>
+                    <a href="gallery.html?category=twilight"><img src="assets/Twilight/DY4A8001-l.jpg"
+                            alt="Photo 2"></a>
+                    <a href="gallery.html?category=virtual-staging"><img src="assets/Virtual Staging/DY4A9565-1-l.jpg"
+                            alt="Photo 3"></a>
+                    <a href="gallery.html?category=virtual-renovation"><img
+                            src="assets/Virtual Renovation/DY4A9580-1-L.jpg" alt="Photo 4"></a>
+                    <a href="gallery.html?category=item-removal"><img src="assets/Item Removal/IMG_0077-2-l.jpg"
+                            alt="Photo 5"></a>
+                    <!-- <a href=""><img src="assets/4.JPG" alt="Photo 6"></a> -->
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="divider">
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3 class="head-ing">Contact Us</h3>
+                <p>
+                    <span>Address:</span>Tamilnadu - India. <br>
+                    <span class="ph-le">Phone:</span> (+91) 9715210210, <br>
+                <p class="phone-sec">(+91) 6383125089</p>
+                <span class="em-side">Email:</span> <a
+                    href="mailto:thepicturepatch0424@gmail.com">thepicturepatch0424@gmail.com</a>
+                </p>
+                <a href="contact.html" class="contact-button">Get in Touch</a>
+            </div>
+        </div>
+        <div class="cop-right-side">
+            Copyright © 2024 ------------. All Rights Reserved.
+        </div>
+    </div>
+
+    <!-- Fullscreen Navigation -->
+    <div class="fullscreen-nav" id="fullscreenNav">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">our Services</a>
+                <ul class="submenu">
+                    <li><a href="hdr.html">HDR</a></li>
+                    <li><a href="twilight.html">Twilight</a></li>
+                    <li><a href="virtualstaging.html">Virtual Staging</a></li>
+                    <li><a href="virtualrenovation.html">Virtual Renovation</a></li>
+                    <li><a href="itemremoval.html">Item Removal</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+
+
+
+
+    <!-- Filter Buttons -->
+    <div class="gallery-sec">
+        <h1 class="gallery-h1">Gallery</h1>
+
+        <div class="filters">
+            <button data-filter=".virtual-staging">Virtual Staging</button>
+            <button data-filter=".twilight">Twilight</button>
+
+            <button data-filter=".hdr">HDR</button>
+            <button data-filter="*">All</button>
+
+
+            <button data-filter=".item-removal">Item Removal</button>
+            <button data-filter=".virtual-renovation">Virtual Renovation</button>
+        </div>
+    </div>
+
+    <!-- Gallery Image Container -->
+    <section class="item-grid">
+        <div class="grid">
+
+            <div class="grid-item hdr">
+                <img src="assets/HDR/IMG_0153-1.jpg" alt="HDR Image" />
+            </div>
+
+            <div class="grid-item twilight">
+                <img src="assets/Twilight/3F9A0219.jpg" alt="Twilight Image" />
+            </div>
+
+            <div class="grid-item virtual-staging">
+                <img src="assets/Virtual Staging/IMG_0144-1.jpg" alt="Virtual Staging Image" />
+            </div>
+
+            <div class="grid-item virtual-renovation">
+                <img src="assets/Virtual Renovation/DY4A9499-1.jpg" alt="Virtual Renovation Image" />
+            </div>
+
+            <div class="grid-item item-removal">
+                <img src="assets/Item Removal/DY4A7256-1.jpg" alt="Item Removal Image" />
+            </div>
+
+            <div class="grid-item hdr">
+                <img src="assets/HDR/IMG_0188-1.jpg" alt="HDR Image" />
+            </div>
+
+            <div class="grid-item twilight">
+                <img src="assets/Twilight/DY4A8001-1.jpg" alt="Twilight Image" />
+            </div>
+
+            <div class="grid-item virtual-staging">
+                <img src="assets/Virtual Staging/DY4A4990-1.jpg" alt="Virtual Staging Image" />
+            </div>
+
+            <div class="grid-item virtual-renovation">
+                <img src="assets/Virtual Renovation/DY4A9515-1.jpg" alt="Virtual Renovation Image" />
+            </div>
+
+            <div class="grid-item item-removal">
+                <img src="assets/Item Removal/DY4A4369-1.jpg" alt="Item Removal Image" />
+            </div>
+
+            <div class="grid-item hdr">
+                <img src="assets/HDR/DY4A4216.jpg" alt="HDR Image" />
+            </div>
+
+            <div class="grid-item twilight">
+                <img src="assets/Twilight/3F9A0214.jpg" alt="Twilight Image" />
+            </div>
+
+            <div class="grid-item virtual-staging">
+                <img src="assets/Virtual Staging/IMG_0255-1.jpg" alt="Virtual Staging Image" />
+            </div>
+
+            <div class="grid-item virtual-renovation">
+                <img src="assets/Virtual Renovation/DY4A9526-1.jpg" alt="Virtual Renovation Image" />
+            </div>
+
+            <div class="grid-item item-removal">
+                <img src="assets/Item Removal/DY4A4387-1.jpg" alt="Item Removal Image" />
+            </div>
+
+            <div class="grid-item hdr">
+                <img src="assets/HDR/DY4A4231.jpg" alt="HDR Image" />
+            </div>
+
+            <div class="grid-item twilight">
+                <img src="assets/Twilight/DY4A8004-1.jpg" alt="Twilight Image" />
+            </div>
+
+            <div class="grid-item virtual-staging">
+                <img src="assets/Virtual Staging/DY4A9565-1.jpg" alt="Virtual Staging Image" />
+            </div>
+
+            <div class="grid-item virtual-renovation">
+                <img src="assets/Virtual Renovation/DY4A9551-1.jpg" alt="Virtual Renovation Image" />
+            </div>
+
+            <div class="grid-item item-removal">
+                <img src="assets/Item Removal/DY4A8876-1.jpg" alt="Item Removal Image" />
+            </div>
+
+            <div class="grid-item hdr">
+                <img src="assets/HDR/DY4A4235.jpg" alt="HDR Image" />
+            </div>
+
+            <div class="grid-item twilight">
+                <img src="assets/Twilight/3F9A0232.jpg" alt="Twilight Image" />
+            </div>
+
+            <div class="grid-item virtual-staging">
+                <img src="assets/Virtual Staging/IMG_4808.jpg" alt="Virtual Staging Image" />
+            </div>
+
+            <div class="grid-item virtual-renovation">
+                <img src="assets/Virtual Renovation/DY4A9572-1.jpg" alt="Virtual Renovation Image" />
+            </div>
+
+            <div class="grid-item item-removal">
+                <img src="assets/Item Removal/IMG_0074-1.jpg" alt="Item Removal Image" />
+            </div>
+
+            <div class="grid-item hdr">
+                <img src="assets/HDR/DY4A4339.jpg" alt="HDR Image" />
+            </div>
+
+            <div class="grid-item twilight">
+                <img src="assets/Twilight/DY4A8031-1.jpg" alt="Twilight Image" />
+            </div>
+
+            <div class="grid-item virtual-staging">
+                <img src="assets/Virtual Staging/IMG_7551.jpg" alt="Virtual Staging Image" />
+            </div>
+
+            <div class="grid-item virtual-renovation">
+                <img src="assets/Virtual Renovation/DY4A9580-1.jpg" alt="Virtual Renovation Image" />
+            </div>
+
+            <div class="grid-item item-removal">
+                <img src="assets/Item Removal/IMG_0077-2.jpg" alt="Item Removal Image" />
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Arrow Up/Down Button -->
+    <div id="arrow-up-btn" class="arrow-up">
+        <span class="material-symbols-outlined arrow-up-h">arrow_drop_up</span>
+    </div>
+
+    <!-- Social Icons -->
+    <div id="social-icons" class="social-icons hidden">
+        <a href="https://www.instagram.com/realestate__photo_editor?igsh=ZWJoam42OHo0b3Jl" target="_blank"
+            class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/9715210210?text=Recently%20I%20saw%20your%20website%20about%20your%20service.%20Let%20me%20know%20more%20about%20your%20services."
+            target="_blank" class="icon whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="foot-ins-a">
+            <div class="foot-f">
+                <h3 class="foot-fis head-ingg">The Picture Patch</h3>
+                <p>
+                    In the year 2019, The Picture Pitch became widely recognized as a leading service provider
+                    specializing in high-quality Photo Editing, Manipulation, and other related services. We pride
+                    ourselves on delivering creative and precise image transformations that meet the highest standards
+                    of excellence.
+                </p>
+            </div>
+            <div class="foot-f logo-container">
+                <img src="assets/TPP Logo.png" alt="The Picture Patch Logo" class="footer-logo">
+            </div>
+            <div class="foot-f">
+                <h3 class="foot-hed head-ingg">Contacts</h3>
+                <div class="foot-num">
+                    <div><span>Phone: </span>(+91) 9715210210</div>
+                    <div class="mar-left-n">(+91) 6383125089</div>
+
+                </div>
+                <div class="foot-num">
+                    <span>Email: </span><a href="mailto:thepicturepatch0424@gmail.com">thepicturepatch0424@gmail.com</a>
+                </div>
+                <p class="cop-right">&copy; 2020 The Picture Patch. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <script src="modules/js/main.js"></script>
+    <script src="modules/js/gallery.js"></script>
+</body>
+
+</html>

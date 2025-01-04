@@ -1,0 +1,312 @@
+.fixed-header {
+  background: #f0f0f0 !important;
+}
+
+.abt-first-d {
+  padding: 100px 60px 60px 60px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.abt-heading {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+.abt-heading span {
+  color: #d6af7b;
+  margin-left: 5px;
+  font-size: 36px;
+}
+
+.abt-heading::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 20px;
+  left: 50%;
+  height: 1px;
+  margin-top: 20px;
+  background: #292929;
+}
+
+.abt-in-us {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.abt-f-us p {
+  text-align: justify;
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1s ease-in-out;
+}
+
+.slide-in-left {
+  transform: translateX(-200px);
+}
+
+.slide-in-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+.why-we-use {
+  padding: 0 60px 60px 60px;
+  max-width: 1350px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.why-we-h {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.why-we-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.we-us-f {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.we-us-f-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 300px;
+}
+
+.img-we-i {
+  border: 2px solid #d6af7b;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.img-we-i img {
+  max-width: 60px;
+  height: auto;
+}
+
+.we-us-f-in h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.we-us-f-in p {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 1.5;
+}
+
+
+
+
+
+.about-swiper {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+}
+
+.abt-swiper {
+  padding: 0 60px 60px 60px;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: all 0.8s ease-out;
+}
+
+.abt-swiper.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-swiper-slide {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.about-review {
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.about-review blockquote {
+
+  margin: 40px 0;
+  color: #555;
+  line-height: 1.6;
+  position: relative;
+}
+
+.about-review blockquote p {
+  font-size: 1.1rem;
+  line-height: 2;
+
+}
+
+.about-author {
+  font-weight: bold;
+  color: #333;
+}
+
+.right-quote {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.left-quote {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+
+.about-image img {
+  max-width: 100%;
+}
+
+.about-review img {
+  max-width: 50px;
+}
+
+.about-swiper-pagination {
+  margin-top: 20px;
+  right: 20px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.about-swiper-container {
+  margin-top: 30px;
+}
+
+
+
+.about-image img:first-child {
+  display: none;
+}
+
+.about-image img:last-child {
+  display: block;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .why-we-use {
+    padding: 20px;
+  }
+
+  .why-we-content {
+    gap: 20px;
+  }
+
+  .we-us-f {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .we-us-f-in {
+    width: 100%;
+    max-width: none;
+  }
+
+  .about-swiper-slide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .abt-in-us {
+    flex-direction: column;
+  }
+
+  .about-image {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .about-image img:first-child {
+    display: block;
+  }
+
+
+  .about-image img:last-child {
+    display: none;
+  }
+
+  .about-review {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .abt-first-d {
+    padding: 30px 10px;
+    padding-top: 100px;
+  }
+
+  .why-we-use,
+  .abt-swiper {
+    padding: 30px 10px;
+  }
+
+}

@@ -1,0 +1,430 @@
+.header-sec {
+    background: #f0f0f0 !important;
+}
+
+body {
+    background-color: white !important;
+}
+
+.main-yop {
+    padding: 100px 60px 60px 60px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+}
+
+.main-yop h1 {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+
+.main-view {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.main-vieww {
+    width: 100%;
+    margin: 0 auto !important;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.int-asw {
+    text-align: center;
+    color: black;
+}
+
+.int-asw span {
+    font-weight: bolder;
+}
+
+.comparison-slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-rgt,
+.image-lft {
+    position: absolute;
+    top: 0;
+    height: auto;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dragger {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: ew-resize;
+    display: none;
+}
+
+.comparison-slider-container:hover .dragger {
+    display: block;
+}
+
+
+.ui {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.button-rgt,
+.button-lft {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin: 0;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+}
+
+.button-rgt {
+    right: 0;
+}
+
+.button-lft {
+    left: 0;
+}
+
+
+.bot-um {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+
+    background-color: rgba(98, 97, 97, 0.4);
+    color: #fff;
+}
+
+
+
+.explain-hdr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 60px 60px 60px;
+    font-size: 19px;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.explain-hdr p {
+    text-align: justify;
+}
+
+.main-hdr-s {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.in-box1,
+.main-cl,
+.main-box3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.in-box1 p,
+.main-cl p {
+    margin-bottom: 20px;
+    line-height: 1.875em;
+    text-align: justify;
+    font-size: 16px;
+}
+
+
+.in-box1 p+p {
+    margin-top: 10px;
+}
+
+
+.main-cl,
+.main-box3 {
+    gap: 20px;
+    width: 100%;
+}
+
+.main-box3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+.main-cl h3 {
+    margin-bottom: 20px;
+}
+
+.in-asow {
+    margin-top: 20px;
+    line-height: 2;
+    text-align: justify;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+
+.last-con {
+    margin-top: 35px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.main-box3 {
+    margin-top: 35px;
+    font-size: 16px;
+}
+
+
+
+.twi-wq p {
+    display: list-item;
+    margin-left: 1em;
+}
+
+
+
+
+.vir-in h3,
+.in-vr-R h3 {
+    margin-bottom: 20px;
+}
+
+.vir-in,
+.renovation-con {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.vir-in-f {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.vir-in-f p,
+.vr-R p {
+    margin-bottom: 10px;
+    line-height: 2;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.in-vr-R {
+    margin-bottom: 50px;
+}
+
+.inwqd-w p {
+    display: list-item;
+    margin-left: 15px;
+}
+
+.ionc-qw span {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.renovation-con {
+    display: flex;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.faq-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.faq-item h1 {
+    font-size: 30px;
+    width: 100%;
+    color: #b57f3a !important;
+}
+
+.bott-um {
+    border-bottom: 1px solid rgb(214, 210, 210);
+}
+
+.faq-question {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px 0 10px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.main-sdw {
+    width: 100%;
+}
+
+.main-faq {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 30px 10px;
+}
+
+
+.arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.faq-question.active .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-question.active {
+    background-color: white;
+}
+
+.faq-question.active span {
+    color: #b57f3a;
+}
+
+
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    background-color: white;
+    padding: 0 10px;
+}
+
+.faq-answer.active {
+    max-height: auto;
+
+}
+
+.faq-answer p {
+    margin: 0;
+    word-spacing: 3px;
+    padding: 0 0 20px 0;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .main-cl,
+    .main-box3 {
+        gap: 20px;
+        width: 100%;
+    }
+
+    .main-box3 {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .faq-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .int-asw {
+        font-size: 10px;
+    }
+    .int-asw span {
+        font-size: 10px;
+    }
+
+    .vir-in {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .main-yop {
+        padding: 100px 10px 30px 10px;
+    }
+
+    .explain-hdr {
+        padding: 30px 10px;
+    }
+
+    .last-con {
+        font-size: 10px;
+        font-weight: 900;
+    }
+
+    .sec-hdr {
+        padding: 100px 10px 30px 10px;
+    }
+
+    .bot-um {
+        padding: 5px;
+    }
+
+    .main-faq {
+        padding: 30px 10px;
+    }
+
+    .int-asw {
+        font-size: 6px;
+    }
+    .int-asw span {
+        font-size: 6px;
+    }
+}
