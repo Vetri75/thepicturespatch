@@ -90,13 +90,27 @@
         <p class="countdown">Launching in: <span id="timer">3 days</span></p>
     </div>
     <script>
-        // Check if launchDate is already stored in localStorage
-        let launchDate = localStorage.getItem('launchDate');
+         // Function to get a cookie by name
+         function getCookie(name) {
+            const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            if (match) return match[2];
+            return null;
+        }
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + "; expires=" + date.toUTCString() + "; path=/";
+        }
+
+        // Try to get the launchDate from cookies
+        let launchDate = getCookie('launchDate');
 
         if (!launchDate) {
-            // If not, set the launchDate to 3 days from now and store it
-            launchDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000); // 3 days from now
-            localStorage.setItem('launchDate', launchDate);
+            // If no cookie exists, set launchDate to 3 days from now
+            launchDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
+            setCookie('launchDate', launchDate, 365); // Store it for 1 year
         }
 
         const timerElement = document.getElementById('timer');
