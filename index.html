@@ -60,8 +60,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
+            background-image: url('assets/hero.jpg'); /* Add your image URL here */
+            background-size: cover; /* Ensures the background image covers the entire screen */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the background fixed during scrolling */
+            color: #fff; /* Change text color for contrast */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -69,17 +72,20 @@
             margin: 0;
             text-align: center;
         }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
+
         p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
         }
+
         .countdown {
             font-size: 1.5rem;
-            color: #555;
+            color: #fff; /* Ensure the countdown text is visible on the background */
         }
     </style>
 </head>
@@ -87,11 +93,12 @@
     <div>
         <h1>We're Launching Soon!</h1>
         <p>Our website is under construction. Stay tuned for updates!</p>
-        <p class="countdown">Launching in: <span id="timer">3 days</span></p>
+        <p class="countdown">Launching in: <span id="timer" style="font-size: 1.4rem;">3 days</span></p>
     </div>
+
     <script>
-         // Function to get a cookie by name
-         function getCookie(name) {
+        // Function to get a cookie by name
+        function getCookie(name) {
             const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
             if (match) return match[2];
             return null;
@@ -104,20 +111,20 @@
             document.cookie = name + "=" + value + "; expires=" + date.toUTCString() + "; path=/";
         }
 
-        // Try to get the launchDate from cookies
-        let launchDate = getCookie('launchDate');
+        // Check if the countdown date cookie exists
+        let countdownEnd = getCookie('countdownEnd');
 
-        if (!launchDate) {
-            // If no cookie exists, set launchDate to 3 days from now
-            launchDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000);
-            setCookie('launchDate', launchDate, 365); // Store it for 1 year
+        if (!countdownEnd) {
+            // If no cookie exists, set countdown to 3 days from now
+            countdownEnd = new Date().getTime() + (3 * 24 * 60 * 60 * 1000); // 3 days from now
+            setCookie('countdownEnd', countdownEnd, 365); // Store for 1 year
         }
 
         const timerElement = document.getElementById('timer');
 
         const updateTimer = () => {
             const now = new Date().getTime();
-            const timeLeft = launchDate - now;
+            const timeLeft = countdownEnd - now;
 
             const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
