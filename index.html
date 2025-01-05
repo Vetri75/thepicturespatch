@@ -90,8 +90,15 @@
         <p class="countdown">Launching in: <span id="timer">3 days</span></p>
     </div>
     <script>
-        // Countdown Logic
-        const launchDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000); // 3 days from now
+        // Check if launchDate is already stored in localStorage
+        let launchDate = localStorage.getItem('launchDate');
+
+        if (!launchDate) {
+            // If not, set the launchDate to 3 days from now and store it
+            launchDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000); // 3 days from now
+            localStorage.setItem('launchDate', launchDate);
+        }
+
         const timerElement = document.getElementById('timer');
 
         const updateTimer = () => {
