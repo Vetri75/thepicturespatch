@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Coming Soon | The Picture Patch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .countdown {
+            font-size: 1.5rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>We're Launching Soon!</h1>
+        <p>Our website is under construction. Stay tuned for updates!</p>
+        <p class="countdown">Launching in: <span id="timer">3 days</span></p>
+    </div>
+    <script>
+        // Countdown Logic
+        const launchDate = new Date().getTime() + (3 * 24 * 60 * 60 * 1000); // 3 days from now
+        const timerElement = document.getElementById('timer');
+
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            timerElement.textContent = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+
+            if (timeLeft < 0) {
+                timerElement.textContent = "We're live!";
+            }
+        };
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
