@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Standard Favicon -->
     <link rel="icon" href="assets/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -57,89 +58,570 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="modules/css/aboutus.css">
     <link rel="stylesheet" href="modules/css/main.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('assets/hero.jpg'); /* Add your image URL here */
-            background-size: cover; /* Ensures the background image covers the entire screen */
-            background-position: center; /* Centers the background image */
-            background-attachment: fixed; /* Keeps the background fixed during scrolling */
-            color: #fff; /* Change text color for contrast */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .countdown {
-            font-size: 1.5rem;
-            color: #fff; /* Ensure the countdown text is visible on the background */
-        }
-    </style>
 </head>
+
 <body>
-    <div>
-        <h1>We're Launching Soon!</h1>
-        <p>Our website is under construction. Stay tuned for updates!</p>
-        <p class="countdown">Launching in: <span id="timer" style="font-size: 1.4rem;">3 days</span></p>
+    <!-- Header Sectoin -->
+    <header class="header-sec">
+
+        <div class="header-content">
+
+            <div>
+                <span class="material-symbols-outlined" aria-label="Toggle Sidebar"
+                    onclick="toggleLeftBar()">drag_handle</span>
+            </div>
+            <div class="logo-aw">
+                <a href="index.html"><img src="assets/TPP Logo.png"></a>
+            </div>
+            <div>
+                <span class="material-symbols-outlined" onclick="toggleMenu()">menu</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Navigation Sidebar -->
+    <div class="left-bar-sec">
+
+        <div class="lef-bar-close">
+            <span class="material-symbols-outlined close-icon" onclick="closeLeftBar()">close</span>
+        </div>
+
+        <div class="content-leftbar">
+
+            <div class="quote-side">
+
+                <h1 class="head-ing">The Picture Patch</h1>
+                <p style="text-align: justify;">In the year 2019, The Picture Pitch became widely recognized as a
+                    leading service provider specializing in high-quality Photo Editing, Manipulation, and other related
+                    services. We pride ourselves on delivering creative and precise image transformations that meet the
+                    highest standards of excellence. ​</p>
+
+            </div>
+
+            <div class="latest-photos">
+                <h3 class="head-ing">Latest Photos</h3>
+                <div class="photo-gallery">
+                    <a href="gallery.html?category=hdr"><img src="assets/HDR/DY4A4216-l.jpg" alt="Photo 1"></a>
+                    <a href="gallery.html?category=twilight"><img src="assets/Twilight/DY4A8001-l.jpg"
+                            alt="Photo 2"></a>
+                    <a href="gallery.html?category=virtual-staging"><img src="assets/Virtual Staging/DY4A9565-1-l.jpg"
+                            alt="Photo 3"></a>
+                    <a href="gallery.html?category=virtual-renovation"><img
+                            src="assets/Virtual Renovation/DY4A9580-1-L.jpg" alt="Photo 4"></a>
+                    <a href="gallery.html?category=item-removal"><img src="assets/Item Removal/IMG_0077-2-l.jpg"
+                            alt="Photo 5"></a>
+                    <!-- <a href=""><img src="assets/4.JPG" alt="Photo 6"></a> -->
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="divider">
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h3 class="head-ing">Contact Us</h3>
+                <p>
+                    <span>Address:</span>Tamilnadu - India. <br>
+                    <span class="ph-le">Phone:</span> (+91) 9715210210, <br>
+                <p class="phone-sec">(+91) 6383125089</p>
+                <span class="em-side">Email:</span> <a
+                    href="mailto:thepicturepatch0424@gmail.com">thepicturepatch0424@gmail.com</a>
+                </p>
+                <a href="contact.html" class="contact-button">Get in Touch</a>
+            </div>
+        </div>
+        <div class="cop-right-side">
+            Copyright © 2024 ------------. All Rights Reserved.
+        </div>
     </div>
 
-    <script>
-        // Function to get a cookie by name
-        function getCookie(name) {
-            const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-            if (match) return match[2];
-            return null;
-        }
+    <!-- Fullscreen Navigation -->
+    <div class="fullscreen-nav" id="fullscreenNav">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li class="has-submenu">
+                <a href="#" onclick="toggleSubmenu(event)">Our Services</a>
+                <ul class="submenu">
+                    <li><a href="hdr.html">HDR</a></li>
+                    <li><a href="twilight.html">Twilight</a></li>
+                    <li><a href="virtualstaging.html">Virtual Staging</a></li>
+                    <li><a href="virtualrenovation.html">Virtual Renovation</a></li>
+                    <li><a href="itemremoval.html">Item Removal</a></li>
+                </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
 
-        // Function to set a cookie
-        function setCookie(name, value, days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = name + "=" + value + "; expires=" + date.toUTCString() + "; path=/";
-        }
 
-        // Check if the countdown date cookie exists
-        let countdownEnd = getCookie('countdownEnd');
+    <!-- Hero Section -->
 
-        if (!countdownEnd) {
-            // If no cookie exists, set countdown to 3 days from now
-            countdownEnd = new Date().getTime() + (3 * 24 * 60 * 60 * 1000); // 3 days from now
-            setCookie('countdownEnd', countdownEnd, 365); // Store for 1 year
-        }
+    <div class="hero-section">
+        <img class="hero-image" src="assets/hero.jpg" alt="Hero Image">
+        <div class="typing-section">
+            <h1 class="typing-text">
+                We are a creative agency focused on <span class="dynamic-text"></span>
+            </h1>
+            <p>The world without photography will be meaningless</p>
+        </div>
+    </div>
 
-        const timerElement = document.getElementById('timer');
+    <div class="swiper imageSlider">
+        <h1 class="hih-light abt-heading">HighLights</h1>
+        <div class="swiper-wrapper">
 
-        const updateTimer = () => {
-            const now = new Date().getTime();
-            const timeLeft = countdownEnd - now;
+            <div class="swiper-slide image-pair">
+                <div class="image-container awd-wa">
+                    <img src="assets/HDR/IMG_0188.jpg" alt="Before" class="image-before">
+                    <div class="image-label">
+                        BEFORE
+                    </div>
+                </div>
+                <div class="image-container awd-wa">
+                    <img src="assets/HDR/IMG_0188-1.jpg" alt="After" class="image-after">
+                    <div class="image-label">
+                        AFTER
+                    </div>
+                </div>
 
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                <div class="pricing-text-container">
+                    <p class="pricing-text">HDR: $0.60USD</p>
+                </div>
+            </div>
 
-            timerElement.textContent = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+            <div class="swiper-slide image-pair">
+                <div class="image-container awd-wa">
+                    <img src="assets/Virtual Staging/IMG_0255.jpg" alt="Before" class="image-before">
+                    <div class="image-label">
+                        BEFORE
+                    </div>
+                </div>
+                <div class="image-container awd-wa">
+                    <img src="assets/Virtual Staging/IMG_0255-1.jpg" alt="After" class="image-after">
+                    <div class="image-label">
+                        AFTER
+                    </div>
+                </div>
+                <div class="pricing-text-container">
+                    <p class="pricing-text">VIRTUAL STAGING: $15USD</p>
+                </div>
+            </div>
 
-            if (timeLeft < 0) {
-                timerElement.textContent = "We're live!";
-            }
-        };
+            <div class="swiper-slide image-pair">
+                <div class="image-container awd-wa">
+                    <img src="assets/Item Removal/IMG_0077.jpg" alt="Before" class="image-before">
+                    <div class="image-label">
+                        BEFORE
+                    </div>
+                </div>
+                <div class="image-container awd-wa">
+                    <img src="assets/Item Removal/IMG_0077-2.jpg" alt="After" class="image-after">
+                    <div class="image-label">
+                        AFTER
+                    </div>
+                </div>
+                <div class="pricing-text-container">
+                    <p class="pricing-text">ITEM REMOVAL: $2USD to $4USD</p>
+                </div>
+            </div>
 
-        updateTimer();
-        setInterval(updateTimer, 1000);
-    </script>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next swiper-button-nextt"></div>
+        <div class="swiper-button-prev swiper-button-prevv"></div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- We're Picture Patch Section -->
+
+    <section class="we-are fade-in">
+        <div class="we-are-content">
+            <div class="we-are-first fade-in">
+                <img class="img-box-sh" src="assets/Thumbnail/we-re.jpg" alt="Team Image">
+            </div>
+            <div class="we-are-second">
+                <h1 class="head-ing">We Are The Picture Patch</h1>
+                <p style="line-height: 30px !important;">Incepted in the year 2019, The Picture Patch (P) Ltd. is widely
+                    known amongst the recognized service
+                    provider of highest quality Photo Editing Services, Manipulation Services, etc.</p>
+                <section class="services">
+                    <div class="weare-in">
+                        <div class="service-item">
+                            <h3>HAPPY CLIENTS <span class="styled-percentage">100%</span></h3>
+                            <div class="border"></div>
+                            <p>To make the most of the collective genius of all the people involved.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3>BRANDING <span class="styled-percentage">100%</span></h3>
+                            <div class="border"></div>
+                            <p>It’s not just about money, we prioritize the success in all we do.</p>
+                        </div>
+                    </div>
+                    <div class="weare-in">
+                        <div class="service-item">
+                            <h3>ESTATE PHOTOGRAPHY <span class="styled-percentage">100%</span></h3>
+                            <div class="border"></div>
+                            <p>We believe in the value of metrics of results, sales, impact and culture.</p>
+                        </div>
+                        <div class="service-item">
+                            <h3>GRAPHIC DESIGN <span class="styled-percentage">100%</span></h3>
+                            <div class="border"></div>
+                            <p>We practice what we preach. We listen to all voices.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+
+    <section class="we-are fade-in">
+        <div class="we-are-content">
+            <div class="left-content">
+                <div class="swiper-container content-swiper">
+                    <h1 class="head-ing">About Us</h1>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="wrp-ad">
+                                The Picture Patch is the leading online hub for all things digital. Our global team of
+                                professional
+                                editing experts is ready to transform your photos into eye-catching professional images.
+                            </p>
+                            <div class="abt-in">
+                                <div class="in-abt-co">
+                                    <img src="assets/icon-png/startup.png">
+                                    <span>FAST</span>
+                                    <p>24 hour turn around (48 hours for virtual staging)</p>
+                                </div>
+                                <div class="in-abt-co">
+                                    <img src="assets/icon-png/handshake.png">
+                                    <span>NO HIDDEN FEES</span>
+                                    <p>Pay only for what you use with no subscriptions – just pay one fixed low rate per
+                                        image</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="wrp-ad">
+                                Simply upload your photos, and let our professionals take care of the rest.
+                                We offer a wide range of services, including photo editing, virtual staging,
+                                floor plan redraws, renders, and virtual renovations.
+                            </p>
+                            <div class="abt-in">
+                                <div class="in-abt-co">
+                                    <img src="assets/icon-png/thumbs-up.png">
+                                    <span>UNLIMITED CHANGES</span>
+                                    <p>100% satisfaction with our unlimited change guarantee</p>
+                                </div>
+                                <div class="in-abt-co">
+                                    <img src="assets/icon-png/medalist.png">
+                                    <span>REAL SERVICE</span>
+                                    <p>Our customer service experts are available 24/7 on live chat, phone or email</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="wrp-ad">
+                                Are you in the residential or commercial real estate industry and need high-quality
+                                images to showcase your listings? Or are you in the retail industry and want clean and
+                                professional images to display your products? The Picture Patch will work with your
+                                images to get
+                                you the best results to meet your needs but stand out from your competitors.
+                            </p>
+                            <div class="abt-in">
+                                <div class="in-abt-co">
+                                    <img src="assets/icon-png/copy-right1.png">
+                                    <span>NO COPYRIGHT</span>
+                                    <p>We edit your images and return them to you – no ownership took</p>
+                                </div>
+                                <div class="in-abt-co">
+                                    <img src="assets/icon-png/star1.png">
+                                    <span>FREE TRIAL PROJECT</span>
+                                    <p>Want to know how we are working? We do sample project for your specific service
+                                        for free</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Unique Pagination -->
+                    <div class="content-swiper-pagination"></div>
+                    <!-- Unique Navigation -->
+                    <div class="content-swiper-button-next"></div>
+                    <div class="content-swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="we-are-first fade-in">
+                <img class="img-box-sh" src="assets/Thumbnail/we-re-1.jpg" alt="Professional Woman at Laptop">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- How do we work -->
+
+    <section class="we-are">
+        <div class="how-we-content">
+            <h1 class="head-ing how-we-work-h">How We Do Work</h1>
+            <div class="content-work">
+                <div class="inside-work-do">
+                    <img src="assets/icon-png/photo.png">
+                    <span>you upload</span>
+                    <p>Upload your photos from your mobile, tablet, or desktop computer through Dropbox or Wetransfer.
+                    </p>
+                </div>
+                <div class="inside-work-do">
+                    <img src="assets/icon-png/photo-editing.png">
+                    <span>we edit</span>
+                    <p>Our team of photo editing experts will enhance your images within 24 hours. 100% satisfaction
+                        guaranteed.
+                    </p>
+                </div>
+                <div class="inside-work-do">
+                    <img src="assets/icon-png/high-quality.png">
+                    <span>quality assurance</span>
+                    <p>We have a dedicated quality control team to ensure editing is performed to the highest of
+                        standards.
+                    </p>
+                </div>
+                <div class="inside-work-do">
+                    <img src="assets/icon-png/thumbs-up.png">
+                    <span>Ready!</span>
+                    <p>Download the professionally edited images from the email link sent by our team as soon as they
+                        are complete.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Image Slide -->
+
+    <div class="image-slider-section">
+        <div class="swiper image-swiper">
+            <div class="swiper-wrapper">
+                <!-- Category: HDR -->
+                <div class="swiper-slide image-container im-g-co hdr">
+                    <img src="assets/Portrait/HDR1.jpg" alt="HDR Image">
+                    <div class="see-more">
+                        <div class="text-tile">HDR</div>
+
+                        <a href="gallery.html?category=hdr">SEE MORE</a>
+                    </div>
+                </div>
+                <!-- Category: Virtual Staging -->
+                <div class="swiper-slide image-container im-g-co virtual-staging">
+                    <img src="assets/Portrait/Virtual Staging.jpeg" alt="Virtual Staging Image">
+                    <div class="see-more">
+                        <div class="text-tile">virtual staging</div>
+
+                        <a href="gallery.html?category=virtual-staging">SEE MORE</a>
+                    </div>
+                </div>
+                <!-- Category: Twilight -->
+                <div class="swiper-slide image-container im-g-co twilight">
+                    <img src="assets/Portrait/Twilight.jpeg" alt="Twilight Image">
+                    <div class="see-more">
+                        <div class="text-tile">twilight</div>
+
+                        <a href="gallery.html?category=twilight">SEE MORE</a>
+                    </div>
+                </div>
+                <!-- Category: Item Removal -->
+                <div class="swiper-slide image-container im-g-co item-removal">
+                    <img src="assets/Portrait/Item Removal.jpg" alt="Item Removal Image">
+                    <div class="see-more">
+                        <div class="text-tile">item removal</div>
+
+                        <a href="gallery.html?category=item-removal">SEE MORE</a>
+                    </div>
+                </div>
+                <!-- Category: Virtual Renovation -->
+                <div class="swiper-slide image-container im-g-co virtual-renovation">
+                    <img src="assets/Portrait/Virtual Renovation.jpeg" alt="Virtual Renovation Image">
+                    <div class="see-more">
+                        <div class="text-tile">Virtual Renovation</div>
+
+                        <a href="gallery.html?category=virtual-renovation">SEE MORE</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="image-swiper-button-next">→</div>
+            <div class="image-swiper-button-prev">←</div>
+        </div>
+    </div>
+
+
+    <!-- Clients Display Section -->
+    <div class="logo-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="assets/clients/abgaas.jpg" alt="Client 1 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/Barten-Logo-VR.jpg" alt="Client 2 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/Boelen-logo-Video.jpg" alt="Client 3 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/drieklompvr.jpg" alt="Client 4 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/emanuel.jpg" alt="Client 5 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/gulikVR.jpg" alt="Client 1 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/hvmsVR.jpg" alt="Client 2 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/Janssen-en-vandijk-VR-logo.jpg" alt="Client 3 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/laulogo.jpg" alt="Client 4 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/logo_vanderhorst.jpg" alt="Client 5 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/logooolders.jpg" alt="Client 1 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/Marty-Straatsma-Makelaars-logo.jpg" alt="Client 2 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/MNM.jpg" alt="Client 3 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/mth.jpg" alt="Client 4 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/MWV-VR.jpg" alt="Client 5 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/opschoor.jpg" alt="Client 1 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/Peter-Pals-Makelaardij-VR.jpg" alt="Client 2 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/SKMakelaars.jpg" alt="Client 3 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/steegevrklein.jpg" alt="Client 4 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/t-huys.jpg" alt="Client 5 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRbarnsteen.jpg" alt="Client 1 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRboelen-makelaars.jpg" alt="Client 2 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRbrech.jpg" alt="Client 3 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRKocken.jpg" alt="Client 4 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRPronk.jpg" alt="Client 5 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRpunt1.jpg" alt="Client 1 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRridder.jpg" alt="Client 2 Logo">
+            </div>
+            <div class="swiper-slide">
+                <img src="assets/clients/VRrietveld.jpg" alt="Client 3 Logo">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Arrow Up/Down Button -->
+    <div id="arrow-up-btn" class="arrow-up">
+        <span class="material-symbols-outlined arrow-up-h">arrow_drop_up</span>
+    </div>
+
+    <!-- Social Icons -->
+    <div id="social-icons" class="social-icons hidden">
+        <a href="https://www.instagram.com/realestate__photo_editor?igsh=ZWJoam42OHo0b3Jl" target="_blank"
+            class="icon instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/9715210210?text=Recently%20I%20saw%20your%20website%20about%20your%20service.%20Let%20me%20know%20more%20about%20your%20services."
+            target="_blank" class="icon whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+
+
+    <!-- Footer -->
+
+
+    <footer>
+        <div class="foot-ins-a">
+            <div class="foot-f">
+                <h3 class="foot-fis head-ingg">The Picture Patch</h3>
+                <p>
+                    In the year 2019, The Picture Pitch became widely recognized as a leading service provider
+                    specializing in high-quality Photo Editing, Manipulation, and other related services. We pride
+                    ourselves on delivering creative and precise image transformations that meet the highest standards
+                    of excellence.
+                </p>
+            </div>
+            <div class="foot-f logo-container">
+                <a href="index.html"><img src="assets/TPP Logo.png" alt="The Picture Patch Logo"
+                        class="footer-logo"></a>
+            </div>
+            <div class="foot-f">
+                <h3 class="foot-hed head-ingg">Contacts</h3>
+                <div class="foot-num">
+                    <div><span>Phone: </span>(+91) 9715210210</div>
+                    <div class="mar-left-n">(+91) 6383125089</div>
+
+                </div>
+                <div class="foot-num">
+                    <span>Email: </span><a href="mailto:thepicturepatch0424@gmail.com">thepicturepatch0424@gmail.com</a>
+                </div>
+                <p class="cop-right">&copy; 2020 The Picture Patch. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
+    <script src="modules/js/slider.js"></script>
+    <script src="modules/js/gallery.js"></script>
+    <script src="modules/js/main.js"></script>
 </body>
+
 </html>
