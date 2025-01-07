@@ -242,7 +242,24 @@
   display: block;
 }
 
+/* personal Details */
 
+.personal-details {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.details-p {
+  display: none; /* Initially hide the details */
+  margin-top: 10px;
+}
+
+.details-p p {
+  margin: 5px 0;
+}
 
 
 

@@ -377,6 +377,16 @@
     </section>
 
 
+    <div class="personal-details">
+        <p>Personal Details</p>
+        <div class="details-p">
+            <p>PAN- BHWPJ7638F</p>
+            <p>Aadhar- 591153294727</p>
+            <p>PhoneNo- +91 9715210210</p>
+        </div>
+    </div>
+
+
 
     <!-- Arrow Up/Down Button -->
     <div id="arrow-up-btn" class="arrow-up">
@@ -432,6 +442,19 @@
     <script src="modules/js/about.js"></script>
     <script src="modules/js/main.js"></script>
     <script src="modules/js/slider.js"></script>
+    <script>
+        const personalDetails = document.querySelector('.personal-details');
+        const details = document.querySelector('.details-p');
+
+        personalDetails.addEventListener('click', () => {
+            // Toggle the visibility of the details
+            if (details.style.display === 'none' || details.style.display === '') {
+                details.style.display = 'block'; // Show details
+            } else {
+                details.style.display = 'none'; // Hide details
+            }
+        });
+    </script>
 </body>
 
 </html>
